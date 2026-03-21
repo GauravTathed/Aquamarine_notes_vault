@@ -22,5 +22,14 @@
       ],
       "key": "C"
     }
+  ],
+  "calendar:show-calendar-view": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "C"
+    }
   ]
 }

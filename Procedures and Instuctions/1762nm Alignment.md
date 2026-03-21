@@ -1,4 +1,4 @@
-This page contains procedure that was followed on [[1762 Alignment and RB data collection - 20260311]] to align 1762nm laser to an Ion. 
+This page contains procedure that was followed on [[2026-03-11 — 1762 Alignment and RB data collection]] to align 1762nm laser to an Ion. 
 The following assumptions are made:
 - You are able to trap Barium isotopes (138, 137 or others)
 - You have a basic optical path laid out for 1762nm. 
