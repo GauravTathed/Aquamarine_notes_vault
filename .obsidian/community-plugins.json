@@ -3,5 +3,6 @@
   "table-checkbox-renderer",
   "obsidian-git",
   "obsidian-zotero-desktop-connector",
-  "calendar"
+  "calendar",
+  "obsidian-reminder-plugin"
 ]

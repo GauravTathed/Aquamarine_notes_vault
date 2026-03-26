@@ -48,7 +48,7 @@ P(m) = A p^m + B,
 $$
 where $A$ and $B$ account for state-preparation and measurement errors, and $p$ parameterizes the average decay per applied random unitary layer. The validity of this form relies on the assumption that errors are effectively memoryless and do not drift or vary systematically throughout the experiment. Under these conditions, the extracted decay constant provides a measure of the average error associated with the implemented operations.
 
-This assumption can be violated by temporally correlated or explicitly time-dependent noise. For example, a periodic error source such as AC line noise can imprint coherent modulations on the applied operations, leading to departures from a purely exponential decay. In that case, the survival probability may exhibit oscillatory structure or other non-exponential behavior, indicating a breakdown of the simple Markovian error model. \
+This assumption can be violated by temporally correlated or explicitly time-dependent noise. For example, a periodic error source such as AC line noise can imprint coherent modulations on the applied operations, leading to departures from a purely exponential decay. In that case, the survival probability may exhibit oscillatory structure or other non-exponential behavior, indicating a breakdown of the simple Markovian error model. 
 
 ## Experimental Results
 Working on Analysis Script
