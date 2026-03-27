@@ -5,8 +5,8 @@ surprising thing is that there was a dark ion in the trap all day. And we still 
 Now trapping again. 
 
 We weren't able to trap a single Ba137. 
-![[Capture 1.png]]
-![[Screenshot 2026-03-24 183137.png]]
+![[Capture 1.png|697]]
+![[Screenshot 2026-03-24 183137.png|697]]
 
 Overall we trapped 22 times but always with a dark ion. 
 Each of the 100 attempts was at a different spot on the Target. 
