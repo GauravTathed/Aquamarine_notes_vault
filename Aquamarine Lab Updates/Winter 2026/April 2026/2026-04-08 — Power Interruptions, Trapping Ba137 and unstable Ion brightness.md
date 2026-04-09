@@ -41,6 +41,12 @@ Checking the [[micro-motion compensation]]
 ![[Pasted image 20260409143705.png]]
 
 Lost the Ion after Calibration. 
+
+Did a [[554nm scan]] just to check the peak because it was taking a while to trap, here's the scan:
+
+![[Screenshot 2026-04-09 at 6.12.20 PM.png]]
+
+Trapped after 39 attempts after the scan. 
 ### [[Beam Drift Camera and actuators]]
 Worked on Motor mounts for actuators
 ![[Pasted image 20260409131704.png]]
