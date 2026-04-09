@@ -39,6 +39,6 @@ Last time I got some weird results for 8 level BVA. So I will replace the Hadama
 | `mappings = {0: '0', 1: '[3, -1]', 2: '[4, 1]', 3: '[2, 0]', 4: '[3, 0]', 5: '[4, 0]', 6: '[3, 1]', 7: '[4, -1]'}`<br><br>`initial_state = [[0,4,-2]]`<br><br>Without Line Signal Compensation                            | ![[Pasted image 20260326160847.png]] |
 | second go at 8 level BVA                                                                                                                                                                                                  | ![[Pasted image 20260326165629.png]] |
 | `mappings = {0: '0', 1: '[3, -1]', 2: '[4, 1]', 3: '[2, 0]', 4: '[3, 0]', 5: '[4, 0]', 6: '[3, 1]', 7: '[4, -1]'}`<br><br>`initial_state = [[0,4,-2]]`<br><br>With Line Signal Compensation                               |                                      |
-|                                                                                                                                                                                                                           |                                      |
+
 
 

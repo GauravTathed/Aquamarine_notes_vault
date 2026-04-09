@@ -4,5 +4,7 @@
   "obsidian-git",
   "obsidian-zotero-desktop-connector",
   "calendar",
-  "obsidian-reminder-plugin"
+  "obsidian-reminder-plugin",
+  "obsidian-icon-folder",
+  "obsidian-rollover-daily-todos"
 ]
