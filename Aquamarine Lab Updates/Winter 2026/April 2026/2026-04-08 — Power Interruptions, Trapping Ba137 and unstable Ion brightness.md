@@ -52,4 +52,13 @@ Worked on Motor mounts for actuators
 ![[Pasted image 20260409131704.png]]
 
 I am modelling for New-Port mirror mounts. 
+### [[Laser Noise]] Characterization
+
+
+| Date and Time          | Plots                                |
+| ---------------------- | ------------------------------------ |
+| 20260409<br>1835, 1921 | ![[Pasted image 20260409193337.png]] |
+| 20260409<br>1930, 2019 | ![[Pasted image 20260410093927.png]] |
+| 20260409<br>2032       | ![[Pasted image 20260410093958.png]] |
+
 
