@@ -24,3 +24,4 @@ ___
 ### [[Line Signal Characterization]]
 It has been a month since our last Line Signal measurement so I will redo one today. 
 
+The Line Signal Characterization did not finish ...

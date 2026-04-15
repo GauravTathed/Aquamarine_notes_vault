@@ -2,6 +2,8 @@
 
 Today Morning Collin found that all the instruments attached to UPS turned off - Including the Ion Control VM and 1762nm Cavity Temperature Controller. So no meaning measurements can be taken today. I am starting new Procedures page called [[Lab Bring-up]]...
 
+After talking to Chris Kleven we found out that there was a Generator test scheduled for this morning - where they switched to generator power for 1hr and then switched back to using normal power. These tests are scheduled every second Wednesday of the month. 
+
 Time to Trap
 ### [[Trapping Ba137]]
 Trapped Ba138 manually and checked that all the lasers were aligned. 
@@ -19,7 +21,7 @@ This is concerning since there are a lot of things that that could be going wron
 - Excess heating
 	- This looks viable ![[Pasted image 20260409122658.png]]
 	- But the way ion goes dark on camera has not been observed before.  ![[Unstable_ion_vid.mp4]]
-	- Also this is happening for Ba138 - seems 
+	- Also this is happening for Ba138
 - Dark Ions?
 	-  We have Trapped Ba137 twice and this happened for both of them
 	- We also trapped Ba138 and this was still happening
@@ -27,12 +29,11 @@ This is concerning since there are a lot of things that that could be going wron
 	- Seems very unlikely because the current Ion was trapped yesterday noon. So we can retain the ion. 
 Not even Kidding - The brightness issue fixed itself. I am currently doing daily calibrations at the following frequencies and powers:
 
-
 | Wavelength | Frequency     | Power         |
 | ---------- | ------------- | ------------- |
 | 493nm      | 607.43203 THz | $\sim$ 47 uW  |
 | 650nm      | 461.31134 THz | $\sim$ 250 uW |
-| 554nm      |               |               |
+
 Checking the [[micro-motion compensation]]
 
 | ![[Pasted image 20260409143228.png]] | ![[Screenshot 2026-04-09 143252.png]] |
