@@ -31,3 +31,4 @@ Panel 2: Magnetic field change
 Panel 3: Ion detuning and Laser detuning
 Panel 4: Ion Phase and Laser Phase in rotating Frame (as well as phase of frequency in rotating frame) 
 
+### [[Randomized Benchmakring]]
