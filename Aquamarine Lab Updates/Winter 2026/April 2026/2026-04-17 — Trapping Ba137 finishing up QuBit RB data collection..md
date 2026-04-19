@@ -4,3 +4,8 @@ This morning checked the 389nm Frequency and found that it was 40GHz high. Tuned
 Trapped in 19 attempts:
 
 ![[Screenshot 2026-04-17 112652.png]]
+
+### [[Randomized Benchmarking]]
+
+Finished Data collection for quDit RB and and took some bussed qubit Ramsey measurmenets
+
