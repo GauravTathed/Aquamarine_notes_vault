@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiPaperclip",
+      "LiDraftingCompass",
       "LiAperture",
       "LiAlbum",
-      "LiArchive",
-      "LiActivity",
-      "LiAtom"
+      "LiArchive"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -37,5 +37,8 @@
   "Aquamarine Lab Updates": "LiAtom",
   "Daily Notes": "LiArchive",
   "Procedures and Instuctions": "LiAlbum",
-  "Projects": "LiAperture"
+  "Projects": "LiAperture",
+  "Plots and Figures": "LiActivity",
+  "Excalidraw": "LiDraftingCompass",
+  "Attachments": "LiPaperclip"
 }

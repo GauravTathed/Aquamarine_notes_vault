@@ -7,5 +7,5 @@ Trapped in 19 attempts:
 
 ### [[Randomized Benchmarking]]
 
-Finished Data collection for quDit RB and and took some bussed qubit Ramsey measurmenets
+Finished Data collection for quDit RB and and took some bussed qubit Ramsey measurements
 

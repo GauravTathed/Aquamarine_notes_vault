@@ -1,3 +1,6 @@
 {
-  "cssTheme": "AnuPpuccin"
+  "cssTheme": "AnuPpuccin",
+  "textFontFamily": "Inter",
+  "interfaceFontFamily": "CMU Serif",
+  "monospaceFontFamily": "Cascadia Mono"
 }
