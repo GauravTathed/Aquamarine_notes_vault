@@ -14,7 +14,7 @@ The Trapping Life-time seems to be solved after reducing 493nm power from ~77uW 
 
 These are the [[Laser Powers]] we should be using 
 
-| Laser (nm) | Power             |
+| Laser (nm) | Power/Energy      |
 | ---------- | ----------------- |
 | 493        | $\sim$ 49$\mu$W   |
 | 650        | $\sim$ 250$\mu$W  |
