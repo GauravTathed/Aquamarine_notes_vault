@@ -8,5 +8,8 @@
   "obsidian-icon-folder",
   "obsidian-rollover-daily-todos",
   "obsidian-excalidraw-plugin",
-  "obsidian-image-toolkit"
+  "obsidian-image-toolkit",
+  "obsidian-tikzjax",
+  "equation-citator",
+  "solve"
 ]

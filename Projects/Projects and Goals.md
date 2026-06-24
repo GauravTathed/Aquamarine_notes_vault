@@ -12,4 +12,5 @@
 | **Laser noise reduction**           | [[Laser Noise Reduction]]           |
 | **Cooling (EIT)**                   | [[EIT cooling]]                     |
 | **Beam Drift Camera and actuators** | [[Beam Drift Camera and actuators]] |
+| **Raman bring up**                  | [[Raman Bring up]]                  |
 

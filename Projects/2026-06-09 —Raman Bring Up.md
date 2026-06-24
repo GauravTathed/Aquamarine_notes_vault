@@ -1,0 +1,2 @@
+Working on bringing up Raman. Yesterday we discussed what all we will need to do our first experiment with Raman which is described in goals of this page [[Raman Bring up]]. 
+We replaced the desiccant in the laser head yesterday, to see if the Head humidity High error goes away. It was recommended to wait for 24 Hrs after replacement. 
