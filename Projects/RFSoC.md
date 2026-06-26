@@ -222,13 +222,10 @@ $$
 \phi_k = \operatorname{atan2}(Q_k,I_k).  
 $$
 The $\operatorname{atan2}$ function is the quadrant-aware inverse tangent. It returns the unique angle $\phi \in (-\pi,\pi]$ such that
-
 $$  
 \cos(\phi) = \frac{I_k}{\sqrt{I_k^2+Q_k^2}},  
 $$
-
 and
-
 $$  
 \sin(\phi) = \frac{Q_k}{\sqrt{I_k^2+Q_k^2}}.  
 $$
@@ -244,14 +241,15 @@ $$
 $$
 This is why $\operatorname{atan2}$ is used instead of the ordinary inverse tangent. The ordinary expression $\tan^{-1}(Q/I)$ only determines the angle modulo $\pi$, while $\operatorname{atan2}(Q,I)$ gives the correct quadrant over the full circle.
 Since the baseband phase is
+
 $$
 2\pi(f_{\mathrm{in}}-f_{\mathrm{LO}})t+\phi_0,  
 $$
 
 its slope is
-$$
-2\pi(f_{\mathrm{in}}-f_{\mathrm{LO}}).  
-$$Therefore, the frequency error is obtained from the phase slope: $$
+
+$$2\pi(f_{\mathrm{in}}-f_{\mathrm{LO}}).$$
+Therefore, the frequency error is obtained from the phase slope: $$
 f_{\mathrm{in}}-f_{\mathrm{LO}}
 =
 \frac{1}{2\pi}  
@@ -264,5 +262,65 @@ $$
 \phi_k-\phi_{k-1}  
 \right),  
 $$
-where the wrapping operation maps the phase difference back into the interval $(-\pi,\pi]$. 
+where the wrapping operation maps the phase difference back into the interval $(-\pi,\pi]$. The corresponding frequency error estimate is
+$$f_{\text{err},k} = \frac{\Delta \phi_k}{2\pi T_{\mathrm{win}}}.$$
 
+Finally, the measured input frequency is
+$$
+f_{\mathrm{LO}}  
++  
+f_{\mathrm{err},k}.  
+$$
+The FPGA can also compute the phase difference directly from two consecutive I/Q vectors without separately computing two absolute phases. Let
+$$  
+Z_k = I_k + iQ_k,  
+$$
+and
+$$  
+Z_{k-1} = I_{k-1} + iQ_{k-1}.  
+$$
+Then the phase difference is the argument of
+$$  
+Z_k Z_{k-1}^{*} = (I_k+iQ_k)(I_{k-1}-iQ_{k-1}).  
+$$
+This gives
+$$
+Z_k Z_{k-1}^{*} = (I_k I_{k-1}+Q_k Q_{k-1})  
++  
+i(Q_k I_{k-1}-I_k Q_{k-1}).  
+$$
+Define
+$$  
+D_k = I_k I_{k-1}+Q_k Q_{k-1},  
+$$
+and
+$$  
+C_k = Q_k I_{k-1}-I_k Q_{k-1}.  
+$$
+
+Here $D_k$ is the dot-product term and $C_k$ is the cross-product term. The phase step is then
+$$
+\Delta \phi_k = \operatorname{atan2}(C_k,D_k).  
+$$
+
+This form is useful in FPGA logic because it directly computes the rotation angle between two consecutive I/Q vectors. Once $\Delta \phi_k$ is known, the frequency error is again
+$$
+f_{\text{err},k} = \frac{\Delta \phi_k}{2\pi T_{\mathrm{win}}}.  
+$$
+Thus, the complete frequency measurement consists of four mathematical steps: mix the input with a complex local oscillator, average the I/Q components over a window, extract the phasor phase, and convert the phase slope into frequency. The resulting measurement is highly sensitive to small frequency differences because the carrier near $f_{\mathrm{LO}}$ has been translated to a slowly rotating baseband phasor.
+
+|Target|Physical frequency|DDC LO frequency|`PHASE_INC`|
+|---|--:|--:|--:|
+|10 MHz|10.000000 MHz|10.000000 MHz|`5726623061333`|
+|Fundamental|75.662550 MHz|75.662550 MHz|`43329090370929`|
+|1st harmonic, 2x|151.325100 MHz|151.325100 MHz|`86658180741857`|
+|2nd harmonic, 3x|226.987650 MHz|226.987650 MHz|`129987271112786`|
+|3rd harmonic, 4x|302.650200 MHz|188.869800 MHz alias|`108158615226941`|
+
+
+| $T_{\mathrm{win}}$ | `WINDOW_BEATS` | Update rate | Nyquist BW | Approx. averaging -3 dB BW | Unambiguous $f_{\mathrm{err}}$ range | Uncertainty, optimistic $1/T$ scaling | Uncertainty, white-noise $1/T^{3/2}$ scaling |
+| -----------------: | -------------: | ----------: | ---------: | -------------------------: | -----------------------------------: | ------------------------------------: | -------------------------------------------: |
+|               1 ms |          61440 |       1 kHz |     500 Hz |                     443 Hz |                              ±500 Hz |                             $1\times$ |                                    $1\times$ |
+|             100 µs |           6144 |      10 kHz |      5 kHz |                   4.43 kHz |                               ±5 kHz |                            $10\times$ |                                 $31.6\times$ |
+|              50 µs |           3072 |      20 kHz |     10 kHz |                   8.86 kHz |                              ±10 kHz |                            $20\times$ |                                 $89.4\times$ |
+|            33.3 µs |           2048 |      30 kHz |     15 kHz |                   13.3 kHz |                              ±15 kHz |                            $30\times$ |                                  $164\times$ |
