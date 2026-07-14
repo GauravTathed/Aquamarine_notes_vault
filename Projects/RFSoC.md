@@ -325,3 +325,6 @@ Thus, the complete frequency measurement consists of four mathematical steps: mi
 |             100 µs |           6144 |      10 kHz |      5 kHz |                   4.43 kHz |                               ±5 kHz |                            $10\times$ |                                 $31.6\times$ |
 |              50 µs |           3072 |      20 kHz |     10 kHz |                   8.86 kHz |                              ±10 kHz |                            $20\times$ |                                 $89.4\times$ |
 |            33.3 µs |           2048 |      30 kHz |     15 kHz |                   13.3 kHz |                              ±15 kHz |                            $30\times$ |                                  $164\times$ |
+
+
+

@@ -2,12 +2,12 @@ The update rate we were working with was $\sim$ 1kHz. And we were seeing the fol
 
 **1 kHz**
 
-| Signal                | Frequency / LO | Slow std estimate | Fast std / residual | Fast std fractional |
-| --------------------- | -------------: | ----------------: | ------------------: | ------------------: |
-| 10 MHz clock control  |  10.000000 MHz |                 — |                   — |                   — |
-| Rep-rate 1st Harmonic |  75.662550 MHz |       4.595154 Hz |         0.180169 Hz |            2.38 ppb |
-| 2nd Harmonic          | 151.325100 MHz |       7.589942 Hz |         0.420644 Hz |            2.78 ppb |
-| 3rd Harmonic          | 226.987650 MHz |      15.849679 Hz |         0.580705 Hz |            2.56 ppb |
+| Signal                | Frequency / LO |     Slow std | Fast std / residual | Fast std fractional |
+| --------------------- | -------------: | -----------: | ------------------: | ------------------: |
+| 10 MHz clock control  |  10.000000 MHz |            — |                   — |                   — |
+| Rep-rate 1st Harmonic |  75.662550 MHz |  4.595154 Hz |         0.180169 Hz |            2.38 ppb |
+| 2nd Harmonic          | 151.325100 MHz |  7.589942 Hz |         0.420644 Hz |            2.78 ppb |
+| 3rd Harmonic          | 226.987650 MHz | 15.849679 Hz |         0.580705 Hz |            2.56 ppb |
 
 | Signal      | Frequency / LO | Slow std estimate | Fast std / residual | Fast std fractional |
 | ----------- | -------------: | ----------------: | ------------------: | ------------------: |
@@ -156,3 +156,10 @@ pk-pk residual:      8.141236986 Hz
 
 | ![[Pasted image 20260627225517.png]] | ![[Pasted image 20260627225538.png\|295]] |
 | ------------------------------------ | ----------------------------------------- |
+
+| Signal                | Frequency / LO |    Slow std | Fast std / residual |
+| --------------------- | -------------: | ----------: | ------------------: |
+| 10 MHz clock control  |  10.000000 MHz |           — |                   — |
+| Rep-rate 1st Harmonic |  75.662550 MHz | 3.171992 Hz |      0.316065966 Hz |
+| 2nd Harmonic          | 151.325100 MHz | 5.826011 Hz |      0.630278965 Hz |
+| 3rd Harmonic          | 226.987650 MHz | 6.861077 Hz |      0.979578223 Hz |
