@@ -440,3 +440,10 @@ where $\omega_1$ and $\omega_2$ are AOM shifts on ARM A and B respectively.  Tak
 $$\omega_{A,k} - \omega_{B,l} = (k-l)\cdot\omega_{\text{rep}} + (\omega_1 - \omega_2). \tag{1.3.4} $$
 There are many comb-tooth pairs that satisfy the same Raman difference frequency, they all contribute to the Raman coupling.
 
+## Relative Transition Strengths Calculations
+### Overview
+The relative transition strengths of transitions between states in $6S_{1/2}$ manifold. This coupling is mediated by excited-state manifolds $6P_{1/2}$ and $6P_{3/2}$. 
+
+$$
+
+$$
