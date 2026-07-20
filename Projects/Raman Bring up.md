@@ -441,9 +441,116 @@ $$\omega_{A,k} - \omega_{B,l} = (k-l)\cdot\omega_{\text{rep}} + (\omega_1 - \ome
 There are many comb-tooth pairs that satisfy the same Raman difference frequency, they all contribute to the Raman coupling.
 
 ## Relative Transition Strengths Calculations
+
+We consider Raman transitions between hyperfine--Zeeman states in the $6S_{1/2}$ ground-state manifold of $^{137}\mathrm{Ba}^{+}$. The Raman coupling is mediated by the excited-state manifolds $6P_{1/2}$ and $6P_{3/2}$.
+The initial and final ground states are denoted by $\lvert i\rangle$ and $\lvert f\rangle$, respectively. The intermediate excited states are denoted by $\lvert e\rangle$.
 ### Overview
-The relative transition strengths of transitions between states in $6S_{1/2}$ manifold. This coupling is mediated by excited-state manifolds $6P_{1/2}$ and $6P_{3/2}$. 
 
+#### Choice of basis 
+The nuclear spin of $^{137}\mathrm{Ba}^{+}$ is
+$$
+\begin{equation}
+I=\frac{3}{2}.
+\end{equation} \tag{1.4.1}
+$$
+For a particular electronic fine-structure manifold with angular momentum $J$, there are two useful angular-momentum bases.
+
+##### Uncoupled Basis
+The uncoupled basis is
+$$
+\begin{equation}
+\mathcal{B}_{\mathrm{u}}
+=
+\left\{
+\lvert I,m_I;J,m_J\rangle
+\right\},
+\end{equation} \tag{1.4.2}
+$$
+where
+$$
+\begin{equation}
+m_I=-I,-I+1,\ldots,I
+\end{equation} \tag{1.4.3}
+$$
+and
+$$
+\begin{equation}
+m_J=-J,-J+1,\ldots,J.
+\end{equation} \tag{1.4.4}
+$$
+In this basis, the nuclear and electronic angular momenta have separately defined projections along the quantization axis. The dimension of the Hilbert space is
+$$
+\begin{equation}
+N=(2I+1)(2J+1).
+\end{equation} \tag{1.4.5}
+$$
+The uncoupled basis is particularly convenient for constructing the Zeeman Hamiltonian because the operators $I_z$ and $J_z$ are diagonal in this basis. It is also convenient for calculating electric-dipole matrix elements, since the electric-dipole operator acts on the electronic coordinates and leaves the nuclear spin projection unchanged.
+
+##### Coupled Basis
+The coupled basis is
+$$
+\begin{equation}
+\mathcal{B}_{\mathrm{c}}
+=
+\left\{
+\lvert F,m_F\rangle
+\right\},
+\end{equation} \tag{1.4.6}
+$$
+where the total angular momentum is
+$$
+\begin{equation}
+F = I + J,
+\end{equation} \tag{1.4.7}
+$$
+and
+$$
+\begin{equation}
+F=|I-J|,|I-J|+1,\ldots,I+J.
+\end{equation} \tag{1.4.8}
+$$
+The projection quantum number is
+$$
+\begin{equation}
+m_F=-F,-F+1,\ldots,F.
+\end{equation} \tag{1.4.9}
+$$
+At intermediate magnetic field, the hyperfine Hamiltonian is diagonal in this coupled basis, and $F$ and $m_F$ are good quantum numbers.
+
+##### Changing between coupled and uncoupled basis
+The coupled and uncoupled bases are related by Clebsch—Gordan coefficients. A coupled state is expanded in the uncoupled basis as
+$$
+\begin{equation}
+\lvert F,m_F\rangle
+=
+\sum_{m_I,m_J}
+\langle I,m_I;J,m_J|F,m_F\rangle
+\lvert I,m_I;J,m_J\rangle
+.
+\end{equation} \tag{1.4.10}
+$$
+Only terms satisfying
+$$
+\begin{equation}
+m_F=m_I+m_J
+\end{equation} \tag{1.4.11}
+$$
+are nonzero. The inverse transformation is
+$$
+\begin{equation}
+    \lvert I,m_I;J,m_J\rangle
+    =
+    \sum_{F,m_F}
+    \langle I,m_I;J,m_J|F,m_F\rangle^{*}
+    \lvert F,m_F\rangle
+    .
+\end{equation}
 $$
 
-$$
+#### Polarization in the spherical basis
+
+#### Optical detuning
+### Single-photon electric-dipole amplitude
+
+### Two-photon Raman amplitude
+
