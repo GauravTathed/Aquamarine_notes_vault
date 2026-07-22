@@ -549,6 +549,497 @@ $$
 
 #### Polarization in the spherical basis
 
+Let the external magnetic field define the quantization axis,
+
+$$
+\hat{\mathbf z}\parallel\mathbf B.  
+$$
+
+The propagation direction of a laser beam is written as $\hat{\mathbf k}$. In the present geometry, the beam is restricted to the (xz)-plane, such that
+
+$$
+\hat{\mathbf k}
+
+\sin\theta_k,\hat{\mathbf x}  
++  
+\cos\theta_k,\hat{\mathbf z},  
+$$
+
+where $\theta_k$ is the angle between the beam and the quantization axis. A convenient orthonormal basis for the plane transverse to $\hat{\mathbf k}$ is
+
+$$ 
+\hat{\boldsymbol\theta}
+=
+\cos\theta_k,\hat{\mathbf x}
+-
+\sin\theta_k,\hat{\mathbf z},  
+$$
+
+and
+
+$$
+\hat{\boldsymbol\phi}
+=
+\hat{\mathbf y}.  
+$$
+These vectors satisfy
+
+$$
+\hat{\boldsymbol\theta}\cdot\hat{\mathbf k}
+
+= 
+\hat{\boldsymbol\phi}\cdot\hat{\mathbf k}
+=
+0,  
+\qquad  
+\hat{\boldsymbol\theta}\cdot\hat{\boldsymbol\phi}=0.  
+$$
+
+They correspond to the linear-polarization basis of the beam, or helicity, frame used in Ref. [Campbell], where $\hat{\mathbf e}_{x'}=\hat{\boldsymbol\theta}$ and $\hat{\mathbf e}_{y'}=\hat{\boldsymbol\phi}$. ([arXiv](https://arxiv.org/pdf/2510.07451 "Angular Geometry of Atomic Multipole Transitions"))
+
+The positive-frequency component of the electric field is written as
+
+$$
+\mathbf E^{(+)}(\mathbf r,t)
+
+\frac{E_0}{2}  
+\hat{\boldsymbol\epsilon},  
+e^{i(\mathbf k\cdot\mathbf r-\omega t+\varphi_L)},  
+$$
+
+where $E_0$ is the field amplitude, $\varphi_L$ is the optical phase, and $\hat{\boldsymbol\epsilon}$ is a normalized complex polarization vector satisfying
+
+$$
+\hat{\boldsymbol\epsilon}^{*}  
+\cdot  
+\hat{\boldsymbol\epsilon}  
+=1,  
+\qquad  
+\hat{\mathbf k}\cdot\hat{\boldsymbol\epsilon}=0.  
+$$
+
+Because the field is transverse, the polarization vector has only two independent components and may be expressed as
+
+$$
+\hat{\boldsymbol\epsilon}
+=
+\epsilon_\theta\hat{\boldsymbol\theta}  
++  
+\epsilon_\phi\hat{\boldsymbol\phi}.  
+$$
+
+This is the Jones-vector representation in the beam frame,
+
+$$
+\mathbf J
+=
+\begin{pmatrix}  
+	\epsilon_\theta \\
+	\epsilon_\phi  
+\end{pmatrix}.  
+$$
+
+The use of the transverse beam-frame components as a Jones vector follows the convention adopted in Ref. [Campbell]. ([arXiv](https://arxiv.org/pdf/2510.07451 "Angular Geometry of Atomic Multipole Transitions"))
+An arbitrary pure polarization state can be parameterized by two angles:
+
+- the polarization angle $\psi$, which gives the orientation of the major axis of the polarization ellipse;
+- the ellipticity angle $\chi$, which gives the ratio of the minor and major axes and the handedness of the polarization.
+
+Define the orthogonal ellipse-axis vectors
+
+$$
+\hat{\mathbf a}
+=
+\cos\psi\,\hat{\boldsymbol\theta}  
++  
+\sin\psi\,\hat{\boldsymbol\phi},  
+$$
+
+and
+
+$$
+\hat{\mathbf b}
+=
+-\sin\psi\,\hat{\boldsymbol\theta}  
++  
+\cos\psi\,\hat{\boldsymbol\phi}.  
+$$
+
+Here, $\hat{\mathbf a}$ points along the major axis and $\hat{\mathbf b}$ points along the minor axis. The normalized complex polarization vector is then defined as
+
+$$ 
+\boxed{  
+\hat{\boldsymbol\epsilon}
+=
+\cos\chi\,\hat{\mathbf a}  
++  
+i\sin\chi\,\hat{\mathbf b}  
+}  
+$$
+
+with
+
+$$
+-\frac{\pi}{4}  
+\leq  
+\chi  
+\leq  
+\frac{\pi}{4}.  
+$$
+
+At a fixed position, and after absorbing the optical phase into the definition of time, the real electric field becomes
+
+$$
+\frac{\mathbf E(t)}{E_0}
+=
+\cos\chi\,  
+\hat{\mathbf a}\,\cos\omega t  
++  
+\sin\chi\,  
+\hat{\mathbf b}\,\sin\omega t.  
+$$
+
+Equation (11) explicitly describes an ellipse with semiaxes
+
+$$
+a=\cos\chi,  
+\qquad  
+b=|\sin\chi|.  
+$$
+
+Consequently,
+
+$$
+\frac{b}{a}
+=
+|\tan\chi|.  
+$$
+
+The important limiting cases are
+$$
+\chi=0  
+\quad\Longrightarrow\quad  
+\text{linear polarization},  
+$$
+
+and
+$$
+|\chi|=\frac{\pi}{4}  
+\quad\Longrightarrow\quad  
+\text{circular polarization}.  
+$$
+
+For intermediate values of $\chi$, the polarization is elliptical. The sign of $\chi$ determines the sense of rotation of the electric field under the phase convention in Eq. (4).
+
+Substituting Eqs. (8) and (9) into Eq. (10) gives the Jones components
+$$
+\boxed{  
+\epsilon_\theta
+
+= \cos\psi\cos\chi
+
+i\sin\psi\sin\chi  
+}  
+$$
+
+and
+
+$$
+\boxed{  
+\epsilon_\phi
+=
+\sin\psi\cos\chi  
++  
+i\cos\psi\sin\chi.  
+}  
+$$
+
+The Jones vector is therefore
+
+$$
+\boxed{  
+\mathbf J(\psi,\chi)
+=
+\begin{pmatrix}  
+\cos\psi\cos\chi-i\sin\psi\sin\chi \\  
+\sin\psi\cos\chi+i\cos\psi\sin\chi  
+\end{pmatrix}.  
+}  
+$$
+
+It is straightforward to verify that
+
+$$
+|\epsilon_\theta|^2+|\epsilon_\phi|^2=1.  
+$$
+
+A general Jones vector contains two complex numbers and therefore initially contains four real parameters. However, normalization removes one real degree of freedom, while a common phase multiplying the entire vector,
+
+$$
+\mathbf J\rightarrow e^{i\gamma}\mathbf J,  
+$$
+
+does not change the polarization ellipse and removes one additional degree of freedom. A normalized pure polarization state therefore contains $4-1-1=2$ physically independent real parameters. These may be chosen to be the ellipse orientation $\psi$ and ellipticity $\chi$.
+
+The omitted global phase is distinct from the relative phase between two Raman beams. Although it does not affect the polarization of an individual beam, the optical phase difference between the two beams determines the phase of the two-photon Raman matrix element and must be included separately.
+
+For the geometry of Eqs. (1)–(3), the polarization vector is
+
+$$
+\hat{\boldsymbol\epsilon}
+=
+\epsilon_\theta  
+\left(  
+\cos\theta_k\,\hat{\mathbf x}
+-
+\sin\theta_k\,\hat{\mathbf z}  
+\right)  
++  
+\epsilon_\phi\hat{\mathbf y}.  
+$$
+
+Its Cartesian components are therefore
+
+$$ 
+\epsilon_x
+=
+\epsilon_\theta\cos\theta_k,  
+$$
+
+$$ 
+\epsilon_y
+=
+\epsilon_\phi,  
+$$
+
+and
+
+$$
+\epsilon_z=
+=
+-\epsilon_\theta\sin\theta_k.  
+$$
+
+Relative to the quantization axis, the spherical unit vectors are defined as
+
+$$
+\hat{\mathbf e}_{+1}
+
+= -\frac{  
+\hat{\mathbf x}  
++i\hat{\mathbf y}  
+}{\sqrt{2}},  
+\qquad  
+\hat{\mathbf e}_0
+
+= \hat{\mathbf z},  
+\qquad  
+\hat{\mathbf e}_{-1}
+=
+\frac{  
+\hat{\mathbf x}  
+-i\hat{\mathbf y}  
+}{\sqrt{2}}.  
+$$
+
+The corresponding spherical components of the polarization vector are
+
+$$
+\epsilon_{+1}
+=
+-\frac{  
+\epsilon_x+i\epsilon_y  
+}{\sqrt{2}},  
+$$
+
+$$ 
+\epsilon_0=\epsilon_z,  
+$$
+
+and
+
+$$
+\epsilon_{-1}
+=
+\frac{  
+\epsilon_x-i\epsilon_y  
+}{\sqrt{2}}.  
+$$
+
+Using Eqs. (21)–(23), these become
+
+$$
+\boxed{  
+\epsilon_{+1}
+=
+-\frac{  
+\epsilon_\theta\cos\theta_k  
++i\epsilon_\phi  
+}{\sqrt{2}}  
+}  
+$$
+
+$$
+\boxed{  
+\epsilon_0
+=
+-\epsilon_\theta\sin\theta_k  
+}  
+$$
+
+and
+
+$$ 
+\boxed{  
+\epsilon_{-1}
+=
+\frac{  
+\epsilon_\theta\cos\theta_k  
+-i\epsilon_\phi  
+}{\sqrt{2}}.  
+}  
+$$
+
+Substituting Eqs. (15) and (16) gives the full dependence on the experimental parameters $\theta_k$, $\psi$, and $\chi$:
+
+$$
+\epsilon_{+1}
+=
+-\frac{1}{\sqrt{2}}  
+\left[  
+\cos\theta_k  
+\left(  
+\cos\psi\cos\chi  
+-i\sin\psi\sin\chi  
+\right)  
++  
+i\left(  
+\sin\psi\cos\chi  
++i\cos\psi\sin\chi  
+\right)  
+\right],  
+$$
+
+$$ 
+\epsilon_0
+=
+-\sin\theta_k  
+\left(  
+\cos\psi\cos\chi  
+-i\sin\psi\sin\chi  
+\right),  
+$$
+
+and
+
+$$
+\epsilon_{-1}
+=
+\frac{1}{\sqrt{2}}  
+\left[  
+\cos\theta_k  
+\left(  
+\cos\psi\cos\chi  
+-i\sin\psi\sin\chi  
+\right)
+
+i\left(  
+\sin\psi\cos\chi  
++i\cos\psi\sin\chi  
+\right)  
+\right].  
+$$
+
+Normalization of the polarization vector implies
+$$
+|\epsilon_{+1}|^2  
++  
+|\epsilon_0|^2  
++  
+|\epsilon_{-1}|^2  
+=1.  
+$$
+
+For an electric-dipole interaction,
+
+$$
+-\mathbf d\cdot\mathbf E
+=
+-\sum_{q=-1}^{+1}  
+(-1)^q d_q E_{-q}.  
+$$
+
+The atomic dipole component (d_q) connects states satisfying
+$$
+\Delta m=q.  
+$$
+It follows that a transition with (\Delta m=q) is driven by the field component (\epsilon_{-q}). This is also the index structure appearing in the E1 limit of the geometric Rabi-frequency expression in Ref. [Campbell]. ([arXiv](https://arxiv.org/pdf/2510.07451 "Angular Geometry of Atomic Multipole Transitions"))
+
+The physical transition amplitudes are therefore identified as
+
+$$
+\boxed{  
+\epsilon_{\sigma^-}  
+\equiv  
+\epsilon_{+1}  
+}  
+\qquad  
+(\Delta m=-1),  
+$$
+$$
+\boxed{  
+\epsilon_{\pi}  
+\equiv  
+\epsilon_0  
+}  
+\qquad  
+(\Delta m=0),  
+$$
+
+and
+$$
+\boxed{  
+\epsilon_{\sigma^+}  
+\equiv  
+\epsilon_{-1}  
+}  
+\qquad  
+(\Delta m=+1).  
+$$
+
+Thus, the polarization amplitudes used in the transition-strength calculation are
+
+$$ 
+\boxed{  
+\epsilon_{\sigma^-}
+=
+-\frac{  
+\epsilon_\theta\cos\theta_k+i\epsilon_\phi  
+}{\sqrt{2}},  
+}  
+$$
+
+$$
+\boxed{  
+\epsilon_{\pi}
+=
+-\epsilon_\theta\sin\theta_k,  
+}  
+$$
+
+and
+$$
+\boxed{  
+\epsilon_{\sigma^+}
+=
+\frac{  
+\epsilon_\theta\cos\theta_k-i\epsilon_\phi  
+}{\sqrt{2}}.  
+}  
+$$
+
+The complex amplitudes in Eqs. (40)–(42), rather than only their squared magnitudes, must be retained for Raman transitions because amplitudes associated with different intermediate states and different fine-structure manifolds are added coherently.
+
 #### Optical detuning
 ### Single-photon electric-dipole amplitude
 
