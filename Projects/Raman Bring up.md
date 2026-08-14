@@ -549,6 +549,74 @@ $$
 
 #### Polarization in the spherical basis
 
+Let the quantization axis be in $+ \hat{z}$, and the laser propagation direction is assumed to lie in $x-z$ plane and can be written as:
+
+$$\hat{k} = \left( \sin\theta_k, 0, \cos \theta_k \right),$$
+where $\theta_k$ is angle between the beam and the quantization axis. The two orthogonal vectors perpendicular to $\hat{k}$ are chosen as:
+
+$$\hat{e}_a = \left( \cos\theta_k, 0, -\sin \theta_k \right),$$
+$$\hat{e}_b = (0,1,0).$$
+We will define the polarization ellipse by an orientation angle $\psi$ and ellipticity angle $\chi$, the jones vector components in $(\hat{e}_a, \hat{e}_b)$ basis are:
+$$\epsilon_a = \cos\psi \cos\chi - i \sin\psi \sin\chi,$$
+$$\epsilon_b = \sin\psi\cos\chi + i \cos \psi \sin \chi.$$
+The Cartesian polarization vector is therefore
+
+$$\hat{\epsilon} = \epsilon_a \hat{e}_a + \epsilon_b \hat{e}_b.$$
+The Cartesian polarization is converted to mathematical spherical components using
+
+$$
+\begin{align}
+\sigma_+&: \epsilon_{+1} &= -{\epsilon_x + i \epsilon_y \over \sqrt{2}},\\
+\pi&:& \epsilon_{0} = \epsilon_z,\\
+\sigma_-&: \epsilon_{-1} &= {\epsilon_x - i \epsilon_y \over \sqrt{2}}.
+\end{align}
+$$
+$$
+\boxed{
+\begin{aligned}
+\epsilon_{+1}
+&=
+-\frac{
+\cos\psi
+\left(
+\cos\theta_k\cos\chi-\sin\chi
+\right)
++
+i\sin\psi
+\left(
+\cos\chi-\cos\theta_k\sin\chi
+\right)
+}{
+\sqrt2
+},\\
+\epsilon_0
+&=
+-\sin\theta_k
+\left(
+\cos\psi\cos\chi
+-i\sin\psi\sin\chi
+\right),\\
+\epsilon_{-1}
+&=
+\frac{
+\cos\psi
+\left(
+\cos\theta_k\cos\chi+\sin\chi
+\right)
+-
+i\sin\psi
+\left(
+\cos\chi+\cos\theta_k\sin\chi
+\right)
+}{
+\sqrt2
+}.
+
+\end{aligned}
+
+}
+
+$$
 #### Optical detuning
 ### Single-photon electric-dipole amplitude
 

@@ -327,4 +327,215 @@ Thus, the complete frequency measurement consists of four mathematical steps: mi
 |            33.3 µs |           2048 |      30 kHz |     15 kHz |                   13.3 kHz |                              ±15 kHz |                            $30\times$ |                                  $164\times$ |
 
 
+## PMOD TTL Breakout PCB design
 
+```tikz
+\usetikzlibrary{decorations.pathmorphing}
+
+\begin{document}
+\begin{tikzpicture}[
+    x=1cm,
+    y=1cm,
+    font=\small,
+    wire/.style={line width=0.8pt},
+    block/.style={
+        draw,
+        line width=0.8pt,
+        minimum width=2.8cm,
+        minimum height=1.5cm,
+        align=center
+    },
+    rblock/.style={
+        draw,
+        line width=0.8pt,
+        minimum width=2.4cm,
+        minimum height=1.4cm,
+        align=center
+    },
+    resistor/.style={
+        line width=0.8pt,
+        decorate,
+        decoration={zigzag, segment length=5pt, amplitude=2pt}
+    }
+]
+
+% Ground helper
+\newcommand{\ground}[2]{
+    \draw[line width=0.8pt] (#1,#2) -- (#1,#2-0.12);
+    \draw[line width=0.8pt] (#1-0.18,#2-0.12) -- (#1+0.18,#2-0.12);
+    \draw[line width=0.8pt] (#1-0.12,#2-0.22) -- (#1+0.12,#2-0.22);
+    \draw[line width=0.8pt] (#1-0.06,#2-0.32) -- (#1+0.06,#2-0.32);
+}
+
+% ---------------------------------------------------------
+% Region boxes
+% ---------------------------------------------------------
+\draw[dashed, rounded corners, line width=0.7pt]
+    (-2.0,-2.3) rectangle (7.85,3.55);
+
+\node[anchor=north west]
+    at (-0.30,3.40)
+    {\textbf{External trigger-conditioning board}};
+
+\draw[dashed, rounded corners, line width=0.7pt]
+    (8.05,-2.3) rectangle (17.5,3.55);
+
+\node[anchor=north west]
+    at (8.25,3.40)
+    {\textbf{RFSoC 4x2 onboard circuitry}};
+
+% ---------------------------------------------------------
+% External trigger
+% ---------------------------------------------------------
+\node[anchor=east] at (0,0) {5-V trigger};
+
+\draw[wire] (0,0) -- (1.35,0);
+
+\filldraw[fill=white, line width=0.8pt]
+    (0,0) circle (2pt);
+
+\coordinate (Vin) at (1.35,0);
+
+\node[below] at (0.72,-0.12)
+    {$0/5~\mathrm{V}$};
+
+% ---------------------------------------------------------
+% Input pull-down
+% ---------------------------------------------------------
+\draw[resistor] (Vin) -- (1.35,-1.55);
+
+\node[right] at (1.62,-1.05)
+    {$R_{\mathrm{PD}}=10~\mathrm{k}\Omega$};
+
+\ground{1.35}{-1.55}
+
+% ---------------------------------------------------------
+% SN74LVC1G17 buffer
+% ---------------------------------------------------------
+\node[block] (U1) at (4.15,0) {
+    SN74LVC1G17\\
+    Schmitt buffer
+};
+
+\draw[wire] (Vin) -- (U1.west);
+
+\node[above] at (2.55,0.16) {$A$};
+
+% Buffer ground
+\draw[wire] (4.15,-0.75) -- (4.15,-1.55);
+\ground{4.15}{-1.55}
+
+% ---------------------------------------------------------
+% 3.3-V supply
+% ---------------------------------------------------------
+\node at (4.15,2.55)
+    {$+3.3~\mathrm{V}$};
+
+\draw[wire]
+    (4.15,2.35) -- (4.15,0.75);
+
+% ---------------------------------------------------------
+% Decoupling capacitor
+% ---------------------------------------------------------
+\draw[wire]
+    (4.15,1.85) -- (5.35,1.85);
+
+\draw[wire]
+    (5.35,1.85) -- (5.35,1.25);
+
+% capacitor plates
+\draw[line width=0.8pt]
+    (5.05,1.25) -- (5.65,1.25);
+
+\draw[line width=0.8pt]
+    (5.05,1.08) -- (5.65,1.08);
+
+\draw[wire]
+    (5.35,1.08) -- (5.35,-1.55);
+
+\node[anchor=west] at (5.55,1.45)
+    {$C_{\mathrm{dec}}=100~\mathrm{nF}$};
+
+\ground{5.35}{-1.55}
+
+% ---------------------------------------------------------
+% Buffer output
+% ---------------------------------------------------------
+\node[above right]
+    at ([xshift=0.03cm,yshift=0.12cm]U1.east)
+    {$Y$};
+
+\draw[wire]
+    (U1.east) -- (5.95,0);
+
+% Series resistor
+\draw[resistor]
+    (5.95,0) -- (7.15,0);
+
+\node[below] at (6.55,-0.42)
+    {$R_s=100~\Omega$};
+
+\draw[wire]
+    (7.15,0) -- (8.45,0);
+
+% ---------------------------------------------------------
+% PMOD node
+% ---------------------------------------------------------
+\coordinate (Pmod) at (8.45,0);
+
+\fill (Pmod) circle (2pt);
+
+\node[below] at (8.75,-0.28)
+    {PMOD};
+
+\node[below] at (7.15,-0.78)
+    {$0/3.3~\mathrm{V}$};
+
+% ---------------------------------------------------------
+% RFSoC onboard pull-up
+% ---------------------------------------------------------
+\draw[wire]
+    (Pmod) -- (8.45,0.95);
+
+\draw[resistor]
+    (8.45,0.95) -- (8.45,2.15);
+
+\node[anchor=west] at (8.85,1.55)
+    {$R_{\mathrm{PU}}=1.15~\mathrm{k}\Omega$};
+
+\node at (8.65,2.55)
+    {$+3.3~\mathrm{V}$};
+
+% ---------------------------------------------------------
+% NVT2008 translator
+% ---------------------------------------------------------
+\node[rblock] (NVT) at (11.2,0) {
+    NVT2008\\
+    translator
+};
+
+\draw[wire]
+    (Pmod) -- (NVT.west);
+
+% ---------------------------------------------------------
+% FPGA input
+% ---------------------------------------------------------
+\draw[wire]
+    (NVT.east) -- (13.9,0);
+
+\node[anchor=west, align=left]
+    at (14.0,0.10)
+    {RFSoC FPGA input\\
+    $(1.8~\mathrm{V}$ domain)};
+
+\node[below] at (13.25,-0.24)
+    {$0/1.8~\mathrm{V}$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+
+The external trigger is a nominal 0 to 5V logic signal. Each trigger is applied to the input of an SN74LVC1G17 non-inverting Schmitt-trigger buffer. The buffer is powered from the 3.3V supply available at the RFSoC PMOD connector. Although the device operates from a 3.3V supply in this application, its input is over-voltage tolerant to 5.5V, allowing a 5V external logic signal to be accepted without exposing the PMOD interface directly to the 5V level ([SN74LVC1G17 Single Schmitt-Trigger Buffer](https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf?ts=1785959446302&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FSN74LVC1G17)). Since the output logic level of the buffer is determined by its 3.3V supply, a logical high at the external input produces an approximately 3.3V output, and  a logical low produces an output close to ground.
+
+![[Pasted image 20260812021148.png]]
