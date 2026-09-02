@@ -11,5 +11,7 @@
   "obsidian-image-toolkit",
   "obsidian-tikzjax",
   "equation-citator",
-  "solve"
+  "solve",
+  "dataview",
+  "smart-autocorrect"
 ]

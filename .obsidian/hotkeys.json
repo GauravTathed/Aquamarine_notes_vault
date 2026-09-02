@@ -92,5 +92,23 @@
       ],
       "key": "="
     }
+  ],
+  "quick-autocorrect:check-spelling-and-grammar": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "C"
+    }
+  ],
+  "quick-autocorrect:fix-next-spelling-grammar-issue": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "F"
+    }
   ]
 }

@@ -1,0 +1,8 @@
+{
+  "customWords": [
+    "Raman"
+  ],
+  "endpointMode": "standard",
+  "serverUrl": "https://api.languagetool.org",
+  "language": "en-US"
+}
