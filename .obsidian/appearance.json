@@ -2,5 +2,8 @@
   "cssTheme": "AnuPpuccin",
   "textFontFamily": "Inter",
   "interfaceFontFamily": "CMU Serif",
-  "monospaceFontFamily": "Cascadia Mono"
+  "monospaceFontFamily": "Cascadia Mono",
+  "enabledCssSnippets": [
+    "vault-index"
+  ]
 }

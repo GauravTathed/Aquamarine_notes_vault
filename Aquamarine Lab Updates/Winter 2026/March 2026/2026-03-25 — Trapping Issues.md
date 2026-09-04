@@ -1,3 +1,7 @@
+---
+tags:
+  - dailycalibrations
+---
 ### [[Trapping Ba137]]
 Yesterday we were having issues with isotope selectivity. So today we started the day with [[554nm scan]] to find the Ba138 ionization frequency at the spot that is giving very high fluence. 
 
@@ -67,7 +71,7 @@ Trapped a single one in 20 attempts:
 ![[Pasted image 20260326095918.jpg]]
 ![[Pasted image 20260326095928.jpg]]
 
-Checked the \[2, 4, 3] transition and [[micro-motion compensation]]:
+Checked the \[2, 4, 3] transition and [[Micromotion Compensation]]:
 ![[Pasted image 20260326100027.jpg|374]]
 
 And did the 5 Freq Calibrations #dailycalibrations ![[Pasted image 20260326100106.jpg]]

@@ -1,8 +1,12 @@
+---
+tags:
+  - dailycalibrations
+---
 ### [[Trapping Ba137]]
 Yesterday I started the Ba137 trapping script before going to bed - I trapped in 11 attempts and the ion was in trap all night when i found it in the morning. 
 ![[Screenshot 2026-03-26 092039.png]]
 
-So I checked for [[micro-motion compensation]] again and these were the results ![[Screenshot 2026-03-26 095402.png]]
+So I checked for [[Micromotion Compensation]] again and these were the results ![[Screenshot 2026-03-26 095402.png]]
 
 I am only seeing the flat lines at basically all the voltages? The ion itself was moving in responce to changing the rod voltages but the micromotion pulse time scan wasn't changing at all. While we were doing this we lost the ion. 
 (An ion that stayed in trap all night at micro-motion compensated voltages). 

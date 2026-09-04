@@ -1,3 +1,7 @@
+---
+tags:
+  - dailycalibrations
+---
 ### [[Power Interruptions]]
 
 Today Morning Collin found that all the instruments attached to UPS turned off - Including the Ion Control VM and 1762nm Cavity Temperature Controller. So no meaning measurements can be taken today. I am starting new Procedures page called [[Lab Bring-up]]...
@@ -34,7 +38,7 @@ Not even Kidding - The brightness issue fixed itself. I am currently doing daily
 | 493nm      | 607.43203 THz | $\sim$ 47 uW  |
 | 650nm      | 461.31134 THz | $\sim$ 250 uW |
 
-Checking the [[micro-motion compensation]]
+Checking the [[Micromotion Compensation]]
 
 | ![[Pasted image 20260409143228.png]] | ![[Screenshot 2026-04-09 143252.png]] |
 | ------------------------------------ | ------------------------------------- |

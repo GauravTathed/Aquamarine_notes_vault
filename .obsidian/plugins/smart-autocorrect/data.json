@@ -59,11 +59,11 @@
     "replaceLinkMenu": true
   },
   "engagement": {
-    "totalSaved": 7,
-    "todaySaved": 7,
-    "lastActiveDay": "2026-09-01",
-    "streak": 1,
-    "bestStreak": 1,
+    "totalSaved": 16,
+    "todaySaved": 2,
+    "lastActiveDay": "2026-09-03",
+    "streak": 3,
+    "bestStreak": 3,
     "milestones": [],
     "alternativesAccepted": 0
   }

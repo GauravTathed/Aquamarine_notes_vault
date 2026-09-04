@@ -12,6 +12,7 @@
   "obsidian-tikzjax",
   "equation-citator",
   "solve",
+  "smart-autocorrect",
   "dataview",
-  "smart-autocorrect"
+  "obsidian-pandoc"
 ]
